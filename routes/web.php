@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\SocialLoginController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,11 +17,14 @@ use App\Http\Controllers\HomeController;
 */
 
 Auth::routes();
-Route::view('/','welcome');
-Route::get('/home', [HomeController::class, 'index'])->name('home');
-
 // Socialite authentication routes
 Route::prefix('social-login')->name('socialLogin.')->group( function(){
     Route::get('login/{provider}', [SocialLoginController::class, 'login'])->name('login');
     Route::any('callback/{provider}', [SocialLoginController::class, 'callback'])->name('callback');
 });
+
+Route::view('/','welcome');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::resource('posts', PostController::class);
+
+

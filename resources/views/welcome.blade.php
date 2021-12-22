@@ -39,7 +39,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1>Welcome to <span style="color: #fd7e14;">post</span> task crud system</h1>
+                        <h1>Welcome to <span style="color: #fd7e14;">post</span> task</h1>
                     </div>
                 </div>
             </div>

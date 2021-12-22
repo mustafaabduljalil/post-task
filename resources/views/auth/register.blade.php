@@ -66,6 +66,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>
+                                @include('auth.social-login')
                             </div>
                         </div>
                     </form>
